@@ -34,11 +34,11 @@ router.get('/add', (req, res, next) => {
 // POST process the Book Details page and create a new Book - CREATE
 router.post('/add', (req, res, next) => {
   let newBook = books({
-    "title": req.body.title,
-    "description": req.body.description,
-    "price": req.body.price,
-    "author": req.body.author,
-    "genre": req.body.genre
+    "Title": req.body.Title,
+    "Description": req.body.Description,
+    "Price": req.body.Price,
+    "Author": req.body.Author,
+    "Genre": req.body.Genre
   });
 
   books.create(newBook, (err, Book) => {
@@ -75,11 +75,11 @@ router.post('/:id', (req, res, next) => {
 
   let updatedBook = books({
     "_id": id,
-    "title": req.body.title,
-    "description": req.body.description,
-    "price": req.body.price,
-    "author": req.body.author,
-    "genre": req.body.genre
+    "Title": req.body.Title,
+    "Description": req.body.Description,
+    "Price": req.body.Price,
+    "Author": req.body.Author,
+    "Genre": req.body.Genre
   });
 
   books.updateOne({ _id: id }, updatedBook, (err) => {
@@ -97,9 +97,9 @@ router.post('/:id', (req, res, next) => {
 
 // GET - process the delete by user id
 router.get('/delete/:id', (req, res, next) => {
-  let id = req.params.id;
+  let _id = req.params.id;
 
-  books.remove({ _id: id }, (err) => {
+  books.remove({ _id: _id }, (err) => {
     if (err) {
       console.log(err);
       res.end(err);
