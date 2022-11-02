@@ -13,7 +13,7 @@ https://github.com/Notorious666/COMP229-F2022-MidTerm-301117834
 
 Link to my Heroku web deployment:
 
-https://pedroh-comp229-test1-301117834.herokuapp.com/
+https://comp229f2022midterm301117834.herokuapp.com/
 
 Link to my YT video:
 
